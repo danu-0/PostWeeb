@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link rel="stylesheet" href="../../css/dashboard.css">
   </head>
   <body>
     <div class="Body">
@@ -111,11 +112,42 @@
       </div>
       <div class="Hero">
         <div class="Top">
-          <h1>Product</h1>
-          <form class="search-form" action="/search" method="GET">
-            <input type="text" name="query" placeholder="Search..." />
-            <button type="submit">Search</button>
-          </form>
+          <div class="list_kategori">
+            <button type="submit" class="List_k">Makanan</button>
+            <button type="submit" class="List_k">Minuman</button>
+            <button type="submit" class="List_k">Snack</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card_row">
+            <div class="card_product"></div>
+            <div class="card_product"></div>
+            <div class="card_product"></div>
+            <div class="card_product"></div>
+            <div class="card_product"></div>
+            <div class="card_product"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card_row">
+            <div class="card_product"></div>
+            <div class="card_product"></div>
+            <div class="card_product"></div>
+            <div class="card_product"></div>
+            <div class="card_product"></div>
+            <div class="card_product"></div>
+          </div>
+        </div>
+        <div class="bar_info">
+          <div class="qtt">
+            <p>Jumlah Pesan</p>
+            <button type="submit" class="info">10</button>
+          </div>
+          <div class="total_price">
+            <p>Total Harga</p>
+            <button type="submit" class="info">Rp.20.000</button>
+          </div>
+          <button type="submit" class="btn">Pesan</button>
         </div>
       </div>
     </div>

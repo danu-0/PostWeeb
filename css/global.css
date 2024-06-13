@@ -93,6 +93,8 @@ html {
   width: calc(100% - 320px);
   height: 100vh;
   box-sizing: border-box;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .Top {
