@@ -1,5 +1,6 @@
+
 search form:
-<form class="search-form" action="/search" method="GET">
+<!-- <form class="search-form" action="/search" method="GET">
             <input type="text" name="query" placeholder="Search..." />
             <button type="submit">Search</button>
-</form>
+</form> -->

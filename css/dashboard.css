@@ -32,8 +32,29 @@
     height: 200px; 
     margin-right: 20px;
     flex-shrink: 0; 
+    text-align: center;
+    padding: 0;
+    box-shadow: 0 4px 8px #33333311;
   }
-  
+  .pict{
+    height: 60%;
+    width: 100%;
+    background-image: url('../assets/image/nasgor.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .sub{
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+  .sub p{
+    margin: 0;
+    padding: 0;
+  }
   .card::-webkit-scrollbar {
     display: none; 
   }
@@ -50,6 +71,7 @@
     overflow-y: auto;
     border-radius: 10px;
     align-items: center;
+    box-shadow: 0 4px 8px #33333311;
   }
   .bar_info p{
     color: #333333;
