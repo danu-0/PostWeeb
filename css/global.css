@@ -1,0 +1,133 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.Body {
+  display: flex;
+}
+
+.SideBar {
+  width: 320px;
+  background-color: #007f73;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+.SideBar h1 {
+  text-align: center;
+  color: #d9d9d9;
+}
+
+.SideBar ul {
+  list-style-type: none;
+  padding: 26px 0px;
+  margin: 0px;
+}
+
+.SideBar ul li {
+  margin: 6px 0px;
+}
+
+.SideBar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin: 0px;
+  border-radius: 4px;
+  transition: ease-in-out 0.3s;
+  font-size: 18px;
+  padding: 0px 20px;
+}
+
+.SideBar ul li a:hover {
+  background-color: #4ccd99;
+}
+
+.Profile {
+  background-color: #1e1e1e7b;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  border-radius: 10px;
+}
+.menuButton {
+  display: flex;
+  justify-content: start;
+  margin: 0px;
+  align-items: center;
+  gap: 10px;
+}
+
+.Profile i {
+  padding: 10px;
+  font-size: 24px;
+}
+
+.Profile button {
+  background-color: #fff;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Profile button:hover {
+  background-color: #eee;
+}
+
+.Hero {
+  background-color: #d9d9d9;
+  padding: 20px;
+  width: calc(100% - 320px);
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.Top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Top h1 {
+  margin: 0;
+  color: #5e6282;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form input[type="text"] {
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-form button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  font-size: 16px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: #555;
+}
