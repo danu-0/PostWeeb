@@ -1,0 +1,12 @@
+.navbar{
+    display: flex;
+    align-items: center;
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #333333;
+}
