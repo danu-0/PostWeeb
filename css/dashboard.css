@@ -34,14 +34,14 @@
   display: flex;
   padding: 10px;
   width: max-content;
-  margin: 20px 0;
+  margin: 0px 0px 10px 0px;
 }
 .card_product {
   background-color: #f0f0f0;
   border: 1px solid #d9d9d9;
   border-radius: 10px;
-  width: 150px;
-  height: 200px;
+  width: 180px;
+  height: 240px;
   margin-right: 20px;
   flex-shrink: 0;
   text-align: center;
