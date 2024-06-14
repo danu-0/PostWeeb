@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AnjayPOS | Order</title>
+    <title>AnjayPOS | Dashboard</title>
     <link rel="stylesheet" href="../../css/global.css" />
     <link rel="stylesheet" href="../../css/dashboard.css" />
     <link
@@ -26,7 +26,7 @@
           <div class="Menu">
             <ul>
               <li>
-                <a href="">
+                <a href="" class="active">
                   <div class="menuButton">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="../product/index.php">
                   <div class="menuButton">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -104,6 +104,28 @@
                       />
                     </svg>
                     <p>Settings</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="../auth/login.php">
+                  <div class="menuButton">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-door-open"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"
+                      />
+                      <path
+                        d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"
+                      />
+                    </svg>
+                    <p>Logout</p>
                   </div>
                 </a>
               </li>
@@ -665,13 +687,13 @@
         <div class="bar_info">
           <div class="qtt">
             <p>Jumlah Pesan</p>
-            <button type="submit" class="info">10</button>
+            <p class="info">7</p>
           </div>
           <div class="total_price">
             <p>Total Harga</p>
-            <button type="submit" class="info">Rp.20.000</button>
+            <p class="info">Rp 61.000</p>
           </div>
-          <a href="./order.html" class="btn-pembayaran">Pembayaran</a>
+          <a href="./order.php" class="btn-pembayaran">Pembayaran</a>
         </div>
       </div>
     </div>

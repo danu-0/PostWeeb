@@ -108,10 +108,11 @@
 }
 .info {
   background-color: #007f73;
-  color: #fff;
+  color: #fff !important;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 24px;
+  padding: 10px 20px;
   font-weight: 600;
   cursor: pointer;
 }
