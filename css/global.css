@@ -74,6 +74,11 @@ html {
 
 }
 
+.SideBar ul li a.active {
+  background-color: #4ccd99;
+  border-radius: 5px;
+}
+
 .Profile i {
   padding: 10px;
   font-size: 24px;
