@@ -135,13 +135,22 @@ $namaPengguna = $_SESSION['nama'];
               </div>
               <p><?php echo $value['nama'] ?></p>
               <div class="sub">
+                <p>0</p>
                 <p>Rp. <?php echo number_format($value['harga'], 0, ',', '.') ?></p>
+                
+              </div>
+              <div class="subb">
+                <div class="btn-min danger" data-product-id="<?php echo $value['id_produk']; ?>">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
+              </svg>
+                </div>
                 <div class="btn-add primary" data-product-id="<?php echo $value['id_produk']; ?>">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
                   </svg>
                 </div>
-              </div>
+                </div>
             </div>
           <?php endforeach ?>
         </div>
@@ -153,13 +162,22 @@ $namaPengguna = $_SESSION['nama'];
               </div>
               <p><?php echo $value['nama'] ?></p>
               <div class="sub">
+               <p>0</p>
                 <p>Rp. <?php echo number_format($value['harga'], 0, ',', '.') ?></p>
-                <div class="btn-add primary">
+                
+              </div>
+              <div class="subb">
+                <div class="btn-min danger" data-product-id="<?php echo $value['id_produk']; ?>">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
+              </svg>
+                </div>
+                <div class="btn-add primary" data-product-id="<?php echo $value['id_produk']; ?>">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
                   </svg>
                 </div>
-              </div>
+                </div>
             </div>
           <?php endforeach ?>
         </div>

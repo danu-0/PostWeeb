@@ -106,42 +106,64 @@ $products  = new Product($conn);
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Kode Barang</th>
+                <th scope="col">Deskripsi</th>
                 <th scope="col">Nama</th>
-                <th scope="col">Stok</th>
+                <th scope="col">Tgl pesan</th>
                 <th scope="col">Harga</th>
-                <th scope="col">Terjual</th>
-                <th scope="col">Pendapatan</th>
+                <th scope="col">Total Harga</th>
+                <th scope="col"></th>
+                
 
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>2232fe</td>
+                <td>nasi goreng X 2</td>
                 <td>Nasi Goreng</td>
-                <td>10</td>
+                <td>10 Jan 2024</td>
                 <td>15.000</td>
-                <td>3</td>
                 <td>45.000</td>
+                <td>
+                <a class="icon danger btn-hps" href="?id=<?php echo $value['id_produk'] ?>">
+                      <svg xmlns=" http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                      </svg>
+                    </a>
+                </td>
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td>3wdwqe2</td>
+                <td>Es Teh X 2</td>
                 <td>Es Teh</td>
-                <td>7</td>
+                <td>10 Jan 2024</td>
                 <td>5.000</td>
-                <td>2</td>
                 <td>10.000</td>
+                <td>
+                <a class="icon danger btn-hps" href="?id=<?php echo $value['id_produk'] ?>">
+                      <svg xmlns=" http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                      </svg>
+                    </a>
+                </td>
               </tr>
               <tr>
                 <th scope="row">3</th>
-                <td>2qe242</td>
+                <td>Udang Goreng X 1</td>
                 <td>Udang Goreng</td>
-                <td>8</td>
+                <td>10 Jan 2024</td>
                 <td>8.000</td>
-                <td>3</td>
-                <td>24.000</td>
+                <td>8.000</td>
+                <td>
+                <a class="icon danger btn-hps" href="?id=<?php echo $value['id_produk'] ?>">
+                      <svg xmlns=" http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                      </svg>
+                    </a>
+                </td>
               </tr>
             </tbody>
           </table>
