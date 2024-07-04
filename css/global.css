@@ -144,3 +144,16 @@ html {
 .search-form button:hover {
   background-color: #555;
 }
+
+.danger{
+  background-color: #ee4e4e;
+}
+.primary{
+  background-color: #007f73;
+}
+.primary:hover{
+  background-color: #4ccd99;
+}
+.danger:hover{
+  background-color: #ff7b7b;
+}

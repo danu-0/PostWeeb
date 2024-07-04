@@ -6,17 +6,6 @@ $db         = new Database();
 $conn       = $db->getConnection();
 $products  = new Product($conn);
 
-if (!isset($_GET['id'])) {
-    header('Location: index.php');
-} else {
-    $id = $_GET['id'];
-}
-
-$detail = $products->getDetail($id);
-
-if (!$detail) {
-    header('Location: index.php');
-}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nama    = $_POST['nama'];
@@ -26,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $kategori = $_POST['kategori'];
     $stok = $_POST['stok'];
 
-    $result = $products->update($id, $nama, $harga, $deskripsi, $kategori, $stok, $image);
+    $result = $products->create($nama, $image, $harga, $deskripsi, $kategori, $stok);
     if ($result) {
         header('Location: index.php');
     } else {
@@ -129,41 +118,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div class="card shadow-sm bg-white">
                             <div class="card-body">
                                 <h5 class="card-title fw-bolder mb-3">
-                                    Ubah Data Product
+                                    Tambah Data Product
                                 </h5>
-                                <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) . "?id=" . $id ?>" enctype="multipart/form-data">
+
+                                <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" enctype="multipart/form-data">
                                     <div class="mb-3">
                                         <label class="form-label" for="nama">Nama Product</label>
-                                        <input class="form-control" type="text" name="nama" id="nama" value="<?php echo $detail['nama'] ?>">
+                                        <input class="form-control" type="text" name="nama" id="nama">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="image">Foto Product</label>
+                                        <input class="form-control" type="file" name="image" id="image">
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label" for="harga">Harga</label>
-                                        <input class="form-control" type="text" name="harga" id="harga" value="<?php echo $detail['harga'] ?>">
+                                        <input class="form-control" type="text" name="harga" id="harga">
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label" for="deskripsi">Deskripsi</label>
-                                        <input class="form-control" type="text" name="deskripsi" id="deskripsi" value="<?php echo $detail['deskripsi'] ?>">
+                                        <input class="form-control" type="text" name="deskripsi" id="deskripsi">
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label" for="kategori">Kategori</label>
-                                        <input class="form-control" type="text" name="kategori" id="kategori" value="<?php echo $detail['kategori'] ?>">
+                                        <input class="form-control" type="text" name="kategori" id="kategori">
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label" for="stok">Stok</label>
-                                        <input class="form-control" type="text" name="stok" id="stok" value="<?php echo $detail['stok'] ?>">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label" for="image">Image</label>
-                                        <?php if (!empty($detail['image']) && ($detail['image']) != "") : ?>
-                                            <img src="../<?php echo $detail['image'] ?>" alt="image" class="img-fluid mb-3">
-                                        <?php else : ?>
-                                            <div class="mb-3">
-                                                <div class="py-2">
-                                                    <p>No image available</p>
-                                                </div>
-                                            </div>
-                                        <?php endif; ?>
-                                        <input class="form-control" type="file" name="image" id="image">
+                                        <input class="form-control" type="text" name="stok" id="stok">
                                     </div>
                                     <div class="text-end">
                                         <a href="index.php" class="btn text-white danger me-2">Batal</a>

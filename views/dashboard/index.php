@@ -123,14 +123,17 @@ $partbot = array_slice($data_products, $half);
         <div class="card_row">
           <?php foreach ($parttop as $key => $value) : ?>
             <div class="card_product" id="<?php echo $key + 1 ?>">
-              <div class="pict"></div>
+              <div class="pict">
+                <img src="../<?php echo $value['image'] ?>" alt="<?php echo $value['nama'] ?>">
+              </div>
               <p><?php echo $value['nama'] ?></p>
               <div class="sub">
                 <p>Rp. <?php echo number_format($value['harga'], 0, ',', '.') ?></p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
-                  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
-                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
-                </svg>
+                <div class="btn-add primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                  </svg>
+                </div>
               </div>
             </div>
           <?php endforeach ?>
@@ -138,14 +141,17 @@ $partbot = array_slice($data_products, $half);
         <div class="card_row">
           <?php foreach ($partbot as $key => $value) : ?>
             <div class="card_product" key="<?php echo $key + 1 ?>">
-              <div class="pict"></div>
+              <div class="pict">
+                <img src="../<?php echo $value['image'] ?>" alt="<?php echo $value['nama'] ?>">
+              </div>
               <p><?php echo $value['nama'] ?></p>
               <div class="sub">
                 <p>Rp. <?php echo number_format($value['harga'], 0, ',', '.') ?></p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
-                  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
-                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
-                </svg>
+                <div class="btn-add primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                  </svg>
+                </div>
               </div>
             </div>
           <?php endforeach ?>
