@@ -64,7 +64,7 @@
                 </a>
               </li>
               <li>
-                <a>
+                <a href="../transaction/index.php">
                   <div class="menuButton">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +108,7 @@
                 </a>
               </li>
               <li>
-                <a href="../auth/login.php">
+                <a href="../../database/auth/logout.php">
                   <div class="menuButton">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

@@ -17,13 +17,13 @@
       </div>
       <div class="login-text">
         <h1>Login Dulu Bang</h1>
-        <form>
-          <label for="">Email</label>
-          <input type="email" placeholder="Masukan Email-nya Bang" />
-          <label for="">Password</label>
-          <input type="password" placeholder="Masukan Password-nya Bang" />
+        <form action="../../database/auth/login.php" method="POST">
+          <label for="email">Email</label>
+          <input type="email" name="email" placeholder="Masukan Email-nya Bang" />
+          <label for="password">Password</label>
+          <input type="password" name="password" placeholder="Masukan Password-nya Bang" />
           <br />
-          <a href="../dashboard/index.php" class="cbtn">Login</a>
+          <button type="submit" class="cbtn">Login</button>
 
           <div class="text-info">
             <p>

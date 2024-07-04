@@ -10,15 +10,15 @@
     <div class="register-container">
       <div class="register-text">
         <h1>Register Dulu Bang</h1>
-        <form>
+        <form action="../../database/auth/register.php" method="POST">
           <label for="">Username</label>
-          <input type="text" placeholder="Masukan Username-nya Bang" />
+          <input type="text" name="nama" placeholder="Masukan Username-nya Bang" />
           <label for="">Email</label>
-          <input type="email" placeholder="Masukan Email-nya Bang" />
+          <input type="email" name="email" placeholder="Masukan Email-nya Bang" />
           <label for="">Password</label>
-          <input type="password" placeholder="Masukan Password-nya Bang" />
+          <input type="password" name="password" placeholder="Masukan Password-nya Bang" />
           <br />
-          <a href="./login.php" class="cbtn">Register</a>
+          <button type="submit" class="cbtn">Register</button>
 
           <div class="text-info">
             <p>
