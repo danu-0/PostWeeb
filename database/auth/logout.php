@@ -9,6 +9,6 @@ session_unset();
 session_destroy();
 
 // Redirect ke halaman login
-header("Location:../../views/auth/login.php");
+header("Location:../../views/auth/index.php");
 exit;
 ?>

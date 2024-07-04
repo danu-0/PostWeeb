@@ -29,3 +29,17 @@ function hapus(href) {
     }
   });
 }
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const addButton = document.querySelectorAll('.btn-add');
+
+    addButton.forEach(button => {
+      button.addEventListener('click', function() {
+        // Lakukan sesuatu saat tombol ditambahkan
+        // Contoh: console.log('Tambahkan ke keranjang');
+        // Anda perlu menambahkan fungsi untuk menyimpan data produk yang dipilih.
+      });
+    });
+  });

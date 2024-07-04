@@ -7,7 +7,7 @@ class Database
     private $host       = "localhost";
     private $username   = "root";
     private $password   = "";
-    private $db_name    = "anjaypos";
+    private $db_name    = "projek";
     private $conn;
 
     // Perbaiki nama konstruktor dengan dua garis bawah

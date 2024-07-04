@@ -15,25 +15,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Enkripsi password
     $password_hashed = password_hash($password, PASSWORD_BCRYPT);
 
-   
-    $sql = "SELECT * FROM tbl_pengguna WHERE email = '$email'";
-    $result = $conn->query($sql);
+    // Establish the database connection
+    $database = new Database();
+    $conn = $database->getConnection();
 
-    if ($result->num_rows > 0) {
-        echo "<script>alert('Email sudah terdaftar!');</script>";
-        exit;
-    }
+    if ($conn) {
+        $sql = "SELECT * FROM tbl_pengguna WHERE email = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
-  
-    $sql = "INSERT INTO tbl_pengguna (nama, email, password, role) VALUES ('$nama', '$email', '$password', '$role')";
+        if ($result->num_rows > 0) {
+            echo "<script>alert('Email sudah terdaftar!');</script>";
+            $stmt->close();
+            $conn->close();
+            exit;
+        }
 
-    if ($conn->query($sql) === TRUE) {
-        echo "<script>alert('Registrasi berhasil!'); window.location.href ='../../views/auth/login.php';</script>";
-        exit;
+        $stmt->close();
+
+        $sql = "INSERT INTO tbl_pengguna (nama, email, password, role) VALUES (?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssss", $nama, $email, $password, $role);
+
+        if ($stmt->execute()) {
+            echo "<script>alert('Registrasi berhasil!'); window.location.href ='../../views/auth/index.php';</script>";
+        } else {
+            echo "<script>alert('Error: " . $sql . "<br>" . $stmt->error . "');</script>";
+        }
+
+        $stmt->close();
+        $conn->close();
     } else {
-        echo "<script>alert('Error: " . $sql . "<br>" . $conn->error . "');</script>";
+        echo "<script>alert('Koneksi ke database gagal!');</script>";
     }
-
-    $conn->close();
 }
 ?>
