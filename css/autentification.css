@@ -117,16 +117,36 @@ body {
 .box-content {
     color: white;
     margin: 10px;
+    font-size: 20px;
+    overflow: hidden;
 }
-.box-content h1{
-    text-align: end;
-}
-.box-content p{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.box-content h1 {
+    white-space: nowrap;
+    animation: slide-right 20s linear infinite;
 }
 
+.box-content h1:nth-child(even) {
+    white-space: nowrap;
+    animation: slide-left 20s linear infinite;
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
 
 
 /* Mediaqueries responsive */
