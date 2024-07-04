@@ -48,7 +48,7 @@ class Product
         $exec  = $this->db->prepare($query);
 
         $exec->bind_param('sissis', $nama, $harga, $deskripsi, $kategori, $stok, $path);
-        $result = $exec->execute();        
+        $result = $exec->execute();
 
 
         session_start();
@@ -115,7 +115,7 @@ class Product
 
     public function uploadFiles($files, $nama)
     {
-        $target_dir = "../uploads/" ;
+        $target_dir = "../uploads/";
         // Create user-specific directory if it doesn't exist
         if (!is_dir($target_dir)) {
             mkdir($target_dir, 0777, true);
@@ -126,8 +126,8 @@ class Product
 
         // Loop through each file and attempt to upload
         foreach ($files as $key => $file) {
-            $target_file = $target_dir . $nama . "-" . $key;
-            $target_file_with_extension = str_replace("../", "", $target_file);
+            $target_file = $target_dir . $nama . "-" . $key . substr(basename($file["name"]), -4);
+            $target_file_with_extension = str_replace("../", "", $target_file, $file_extension);
             if (move_uploaded_file($file["tmp_name"], $target_file)) {
                 // $datatosave["name_" . $key] = basename($file["name"]);
                 $datatosave[$key] = $target_file_with_extension;
@@ -139,5 +139,4 @@ class Product
 
         return $datatosave;
     }
-
 }
