@@ -2,6 +2,15 @@
 <?php include '../../class/product.php' ?>
 
 <?php
+
+session_start();
+
+if (!isset($_SESSION['nama'])) {
+  header("Location: ../auth/index.php");
+  exit();
+}
+$namaPengguna = $_SESSION['nama'];
+
 $db         = new Database();
 $conn       = $db->getConnection();
 $products  = new Product($conn);
@@ -27,6 +36,7 @@ if (isset($_GET['id'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -104,18 +114,18 @@ if (isset($_GET['id'])) {
       </div>
       <div class="Profile">
         <i class="fa-solid fa-user"></i>
-        <p>Udien Samsudien</p>
+        <p><?php echo $namaPengguna; ?></p>
         <button>SetUp Profile</button>
       </div>
     </div>
     <div class="Hero">
       <div class="container-main">
         <div class="d-flex justify-content-end">
-          
-            <a href="add.php" class="btn primary text-white d-flex gap-2 align-items-center">Tambah Product <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
-              </svg>
-            </a>
+
+          <a href="add.php" class="btn primary text-white d-flex gap-2 align-items-center">Tambah Product <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+            </svg>
+          </a>
         </div>
         <div class="table-container">
           <table class="table table-striped">
